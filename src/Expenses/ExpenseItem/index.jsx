@@ -1,4 +1,4 @@
-import { Card } from "../Card";
+import { Card } from "../../UI/Card";
 import { ExpensesDate } from "../ExpensesDate";
 import "./styles.css";
 export function ExpenseItem({ expense }) {

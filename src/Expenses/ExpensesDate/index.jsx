@@ -1,4 +1,4 @@
-import { Card } from "../Card";
+import { Card } from "../../UI/Card";
 import "./styles.css";
 export const ExpensesDate = ({ date }) => {
   const month = date.toLocaleString("default", { month: "long" });
