@@ -1,3 +1,4 @@
+import { Card } from "../Card";
 import { ExpenseItem } from "../ExpenseItem";
 import "./styles.css";
 export const Expenses = () => {
@@ -23,10 +24,10 @@ export const Expenses = () => {
     },
   ];
   return (
-    <div className="expenses">
+    <Card className="expenses">
       {expenses.map((expense) => (
         <ExpenseItem key={expense.id} expense={expense} />
       ))}
-    </div>
+    </Card>
   );
 };
