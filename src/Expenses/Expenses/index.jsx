@@ -12,7 +12,10 @@ export const Expenses = ({ expenses }) => {
   };
   return (
     <div>
-      <ExpensesFilter onFilterChange={filterChangeHandler} />
+      <ExpensesFilter
+        onFilterChange={filterChangeHandler}
+        selected={filteredYear}
+      />
       <Card className="expenses">
         {expenses.map((expense) => (
           <ExpenseItem key={expense.id} expense={expense} />
