@@ -9,7 +9,10 @@ export const Expenses = ({ expenses }) => {
   const filterChangeHandler = (event) => {
     const selectedYear = event.target.value;
     setFilteredYear(selectedYear);
-
+    if (selectedYear === "") {
+      setFilteredExpenses(expenses);
+      return;
+    }
     setFilteredExpenses(
       expenses.filter((expense) => {
         const expenseYear = String(expense.date.getFullYear());
