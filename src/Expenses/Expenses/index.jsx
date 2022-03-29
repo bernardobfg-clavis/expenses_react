@@ -11,16 +11,14 @@ export const Expenses = ({ expenses }) => {
     console.log(selectedYear);
   };
   return (
-    <div>
+    <Card className="expenses">
       <ExpensesFilter
         onFilterChange={filterChangeHandler}
         selected={filteredYear}
       />
-      <Card className="expenses">
-        {expenses.map((expense) => (
-          <ExpenseItem key={expense.id} expense={expense} />
-        ))}
-      </Card>
-    </div>
+      {expenses.map((expense) => (
+        <ExpenseItem key={expense.id} expense={expense} />
+      ))}
+    </Card>
   );
 };
