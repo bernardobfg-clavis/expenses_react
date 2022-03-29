@@ -10,7 +10,7 @@ export const NewExpense = (props) => {
     };
     props.onAddExpense(expenseData);
   };
-  const addNewExpenseHandler = () => {
+  const startigAddingHandler = () => {
     setIsAddingNewExpense(true);
   };
   return (
@@ -21,7 +21,7 @@ export const NewExpense = (props) => {
           onCancel={() => setIsAddingNewExpense(false)}
         />
       ) : (
-        <button onClick={addNewExpenseHandler}>Add New Expense</button>
+        <button onClick={startigAddingHandler}>Add New Expense</button>
       )}
     </div>
   );
